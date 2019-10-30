@@ -1,0 +1,14 @@
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\bin\Debug\netcoreapp2.2\Prodavnica.DAL.Context.deps.json
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\bin\Debug\netcoreapp2.2\Prodavnica.DAL.Context.dll
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\obj\Debug\netcoreapp2.2\Prodavnica.DAL.Context.csproj.CoreCompileInputs.cache
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\obj\Debug\netcoreapp2.2\Prodavnica.DAL.Context.AssemblyInfoInputs.cache
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\obj\Debug\netcoreapp2.2\Prodavnica.DAL.Context.AssemblyInfo.cs
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\bin\Debug\netcoreapp2.2\Prodavnica.DAL.Context.runtimeconfig.json
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\bin\Debug\netcoreapp2.2\Prodavnica.DAL.Context.runtimeconfig.dev.json
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\obj\Debug\netcoreapp2.2\Prodavnica.DAL.Context.csprojAssemblyReference.cache
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\bin\Debug\netcoreapp2.2\Prodavnica.DAL.Context.pdb
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\bin\Debug\netcoreapp2.2\Prodavnica.Common.Models.dll
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\bin\Debug\netcoreapp2.2\Prodavnica.Common.Models.pdb
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\obj\Debug\netcoreapp2.2\Prodavnica.DAL.Context.csproj.CopyComplete
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\obj\Debug\netcoreapp2.2\Prodavnica.DAL.Context.dll
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.DAL.Context\obj\Debug\netcoreapp2.2\Prodavnica.DAL.Context.pdb

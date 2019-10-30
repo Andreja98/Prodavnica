@@ -1,0 +1,103 @@
+<mat-tab-group style="margin-top:-80px; margin: 0 auto; margin-left:20px;">
+
+  <body>
+
+    <mat-tab label="Finansije">
+      <div class="col-2 table-responsive-sm table-responsive-md table-responsive-lg" style="margin-top:50px">
+        <form [formGroup]="service.statistikaForm" class="normal-form">
+          <mat-form-field appearance="outline" style="width:150px; color:black">
+            <mat-label>Godina</mat-label>
+            <mat-select formControlName="godina">
+              <mat-option>--</mat-option>
+              <ng-container *ngFor="let godina of godine">
+                <mat-option value="{{godina}}" (click)="zaradaPoMesecima(godina)">{{godina}}</mat-option>
+              </ng-container>
+            </mat-select>
+            <mat-error>Neophodno je izabrati godinu</mat-error>
+          </mat-form-field>
+        </form>
+      </div>
+
+      <div class="mat-elevation-z8 table-responsive-sm">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" type="text" style="color:black">
+          <mat-placeholder style="font-size:17px;" class="placeholder">Pretraga zarade po mesecima</mat-placeholder>
+        </mat-form-field>
+        <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" style="margin-right:200px;">
+
+
+          <ng-container matColumnDef="mesec">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Mesec </th>
+            <td mat-cell *matCellDef="let statistika"> {{statistika.mesec}} </td>
+            <td mat-footer-cell *matFooterCellDef><button mat-mini-fab color="primary"><i
+                  class="material-icons">functions</i></button></td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="zarada">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Zarada </th>
+            <td mat-cell *matCellDef="let statistika"> {{statistika.zarada | currency}} </td>
+            <td mat-footer-cell *matFooterCellDef> {{suma() | currency}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+        </table>
+      </div>
+    </mat-tab>
+
+
+
+    <mat-tab label="Zalihe">
+
+      <div class="col-2 table-responsive-sm table-responsive-md table-responsive-lg" style="margin-top:50px;">
+        <form [formGroup]="service.prodajaForm" class="normal-form">
+          <mat-form-field appearance="outline" style="width:150px; color:black">
+            <mat-label>Godina</mat-label>
+            <mat-select formControlName="godina">
+              <mat-option>--</mat-option>
+              <ng-container *ngFor="let godina of godine">
+                <mat-option value="{{godina}}" (click)="prodajaVrstaPoMesecima(godina)">{{godina}}</mat-option>
+              </ng-container>
+            </mat-select>
+            <mat-error>Neophodno je izabrati godinu</mat-error>
+          </mat-form-field>
+        </form>
+      </div>
+
+      <div class="mat-elevation-z8 table-responsive-sm">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" type="text" style="color:black">
+          <mat-placeholder style="font-size:17px;" class="placeholder">Pretraga zaliha po mesecima</mat-placeholder>
+        </mat-form-field>
+      <table mat-table [dataSource]="dataSource1" matSort class="mat-elevation-z8" style="margin-right:-100px;">
+
+       
+
+          <ng-container matColumnDef="mesec">
+            <th mat-header-cell *matHeaderCellDef> Mesec </th>
+            <td mat-cell *matCellDef="let prodaja"> {{prodaja.mesec}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="naziv">
+            <th mat-header-cell *matHeaderCellDef> Naziv vrste materijala </th>
+            <td mat-cell *matCellDef="let prodaja"> {{prodaja.naziv}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="prodatoKomada">
+            <th mat-header-cell *matHeaderCellDef> Prodato komada </th>
+            <td mat-cell *matCellDef="let prodaja"> {{prodaja.prodatoKomada}} </td>
+          </ng-container>
+          
+         
+          <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+          <tr mat-row *matRowDef="let prodaja; columns: displayColumns;"></tr>
+
+      </table>
+      </div>
+
+
+    </mat-tab>
+  </body>
+</mat-tab-group>

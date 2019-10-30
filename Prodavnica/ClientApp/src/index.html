@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ProdavnicaStomatoloskogMaterijala</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="toastr.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<style>
+  .orbit-spinner, .orbit-spinner * {
+      box-sizing: border-box;
+    }
+
+    .orbit-spinner {
+      height: 150px;
+      width: 150px;
+      border-radius: 100%;
+      perspective: 1000px;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    .orbit-spinner .orbit {
+      position: absolute;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+    }
+
+    .orbit-spinner .orbit:nth-child(1) {
+      left: 0%;
+      top: 0%;
+      animation: orbit-spinner-orbit-one-animation 1200ms linear infinite;
+      border-bottom: 5px solid #0d0d0d;
+    }
+
+    .orbit-spinner .orbit:nth-child(2) {
+      right: 0%;
+      top: 0%;
+      animation: orbit-spinner-orbit-two-animation 1200ms linear infinite;
+      border-right: 5px solid #0d0d0d;
+    }
+
+    .orbit-spinner .orbit:nth-child(3) {
+      right: 0%;
+      bottom: 0%;
+      animation: orbit-spinner-orbit-three-animation 1200ms linear infinite;
+      border-top: 5px solid #0d0d0d;
+    }
+
+    @keyframes orbit-spinner-orbit-one-animation {
+      0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes orbit-spinner-orbit-two-animation {
+      0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+      }
+    }
+
+    @keyframes orbit-spinner-orbit-three-animation {
+      0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+      }
+      100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+      }
+    }
+</style>
+<body>
+  <app-root>
+    <div class="orbit-spinner">
+      <div class="orbit"></div>
+      <div class="orbit"></div>
+      <div class="orbit"></div>
+    </div>
+  </app-root>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <span style="flex:1 0.5 auto"></span> <a style="font-size:30px; position:absolute" class="menuItem" mat-list-item [routerLink]='["/home"]'><span class="ml-3">Prodavnica</span></a><span style="flex:1 0.5 auto"></span>
+  <button *ngIf="isVlasnik() || isRadnik()" style="font-size:30px;" matTooltip="Menu namenjen radniku" mat-button [matMenuTriggerFor]="menu"><i class="fas fa-list"></i></button>
+  <mat-menu #menu="matMenu">
+    <mat-nav-list>
+      <a style="color: blue;" class="menuItem" mat-list-item [routerLink]='["/listaMaterijala"]'><span class="ml-3">Lista materijala</span></a>
+      <a style="color: blue;" class="menuItem" mat-list-item [routerLink]='["/listaVrsta"]'><span class="ml-3">Lista vrsta materijala</span></a>
+      <a style="color: blue;" class="menuItem" mat-list-item [routerLink]='["/listaRacuna"]'><span class="ml-3">Lista racuna</span></a>
+    </mat-nav-list>
+  </mat-menu>
+  <button style="font-size:30px;" matTooltip="Menu namenjen vlasniku" mat-button [matMenuTriggerFor]="menuu"><i class="fas fa-users-cog"></i></button>
+  <mat-menu #menuu="matMenu">
+    <mat-nav-list>
+      <a *ngIf="isVlasnik()" style="color: blue;" class="menuItem" mat-list-item [routerLink]='["/listaRola"]'><span class="ml-3">Lista rola</span></a>
+      <a *ngIf="isVlasnik()" style="color: blue;" class="menuItem" mat-list-item [routerLink]='["/listaKorisnika"]'><span class="ml-3">Lista korisnika</span></a>
+      <a *ngIf="isVlasnik()" style="color: blue;" class="menuItem" mat-list-item [routerLink]='["/prikazStatistike"]'><span class="ml-3">Statistika</span></a>
+      <span *ngIf="logIn()">
+        <a style="color: blue;" class="menuItem" (click)="logOut()" mat-list-item><span class="ml-3">Odjavi se</span></a>
+      </span>
+      <span *ngIf="!logIn()">
+        <a [routerLink]='["/home"]' style="color: blue;" class="menuItem" mat-list-item><span class="ml-3">Uloguj se</span></a>
+      </span>
+    </mat-nav-list>
+  </mat-menu>
+  <ng-content></ng-content>
+</mat-toolbar>
+
+  
+

@@ -1,0 +1,39 @@
+<div style="margin-left:-180px" class="mat-elevation-z8 table-responsive-sm">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" type="text" style="color:black">
+    <mat-placeholder style="font-size:17px;" class="placeholder">Pretraga racuna</mat-placeholder>
+  </mat-form-field>
+  <table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort>
+
+
+    <ng-container matColumnDef="sifraRacuna">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Sifra racuna</th>
+      <td mat-cell id="sifraRacuna" *matCellDef="let racun"> {{racun.sifraRacuna}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="datumIVremeIzdavanja" id="datumIVremeIzdavanja">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Datum i vreme izdavanja </th>
+      <td mat-cell *matCellDef="let racun"> {{racun.datumIVremeIzdavanja | date:'medium'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ukupanIznos" id="ukupanIznos">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Ukupan iznos </th>
+      <td mat-cell *matCellDef="let racun"> {{racun.ukupanIznos | currency}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="opcije">
+      <th mat-header-cell *matHeaderCellDef>
+      <button style="float:right" mat-mini-fab color="primary"><a (click)="kreirajRacun()"><i id="mat-icon" style="color:chartreuse" class="material-icons">post_add</i></a></button>
+        </th>
+      <td mat-cell *matCellDef="let racun">
+        <button mat-mini-fab color="primary"><a (click)="dodajStavku(racun.sifraRacuna)"><i id="mat-icon" style="color:chartreuse" class="material-icons">playlist_add</i></a></button>
+        <button mat-mini-fab color="accent"><a (click)="izmeniRacun(racun.sifraRacuna)" id="info"><i class="material-icons">info</i></a></button>
+        <button mat-mini-fab color="warn"><a (click)="delete(racun.sifraRacuna)" id="delete"><i class="material-icons">delete_forever</i></a></button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let racun; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

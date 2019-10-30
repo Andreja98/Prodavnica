@@ -1,0 +1,71 @@
+<body>
+  <mat-toolbar style="margin-bottom:5%;">
+    <span>Nova vrsta materijala</span>
+    <span style="flex: 1 1 auto"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+  </mat-toolbar>
+  <form [formGroup]="service.kreirajForm" class="normal-form" (submit)="onSubmit()">
+
+    <div class="row">
+     
+        <mat-form-field style="width:250px" class="example-full-width">
+          <input id="polje" formControlName="vrstaMaterijalaId" type="number" matInput placeholder="ID vrste materijala">
+          <mat-error>Polje ID je <strong>obavezno</strong> </mat-error>
+        </mat-form-field>
+
+        <mat-form-field style="width:250px; margin-left:10px" class="example-full-width">
+          <input id="polje" formControlName="sifraMaterijala" type="text" matInput placeholder="Sifra materijala">
+          <mat-error>Polje sifra je <strong>obavezno</strong> </mat-error>
+        </mat-form-field>
+        </div>
+      
+
+    <div class="row">
+      
+        <mat-form-field style="width:250px;" class="example-full-width">
+          <input id="polje" formControlName="naziv" type="text" matInput placeholder="Naziv">
+          <mat-error>Polje naziv je <strong>obavezno</strong> </mat-error>
+        </mat-form-field>
+
+        <mat-form-field style="width:250px; margin-left:10px" class="example-full-width">
+          <input id="polje" formControlName="cena" type="number" matInput placeholder="Cena">
+          <mat-error>Polje cena je <strong>obavezno</strong> </mat-error>
+        </mat-form-field>
+        </div>
+     
+
+    <div class="row">
+      
+        <mat-form-field style="width:250px;" class="example-full-width">
+          <input id="polje" formControlName="kolicina" type="number" matInput placeholder="Kolicina">
+          <mat-error>Polje kolicina je <strong>obavezno</strong> </mat-error>
+        </mat-form-field>
+
+        <mat-form-field style="width:250px; margin-left:10px" class="example-full-width">
+          <input id="polje" formControlName="dobavljac" type="text" matInput placeholder="Dobavljac">
+          <mat-error>Polje dobavljac je <strong>obavezno</strong> </mat-error>
+        </mat-form-field>
+
+        <div class="example-button-row">
+          <button mat-raised-button color="primary" type="submit" [disabled]="service.kreirajForm.invalid" style="width:250px; margin-right:100px; display:inline-block; float:right; margin-top:28px;">Potvrdi</button>
+        </div>
+        </div>
+     
+    <div class="row">
+     
+        <mat-form-field appearance="outline" style="width:250px;">
+          <mat-label>Materijal</mat-label>
+          <mat-select formControlName="materijalId">
+            <mat-option>--</mat-option>
+            <ng-container *ngFor="let materijal of materijali">
+              <mat-option value="{{materijal.materijalId}}">{{materijal.naziv}}</mat-option>
+            </ng-container>
+          </mat-select>
+          <mat-error>Neophodno je izabrati vrstu materijala</mat-error>
+        </mat-form-field>
+        </div>
+      
+</form>
+</body>
+
+

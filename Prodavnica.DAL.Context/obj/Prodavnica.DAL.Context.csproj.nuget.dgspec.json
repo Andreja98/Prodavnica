@@ -1,0 +1,154 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.DAL.Context\\Prodavnica.DAL.Context.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.Common.Models\\Prodavnica.Common.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.Common.Models\\Prodavnica.Common.Models.csproj",
+        "projectName": "Prodavnica.Common.Models",
+        "projectPath": "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.Common.Models\\Prodavnica.Common.Models.csproj",
+        "packagesPath": "C:\\Users\\andreja\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.Common.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\andreja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.DAL.Context\\Prodavnica.DAL.Context.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.DAL.Context\\Prodavnica.DAL.Context.csproj",
+        "projectName": "Prodavnica.DAL.Context",
+        "projectPath": "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.DAL.Context\\Prodavnica.DAL.Context.csproj",
+        "packagesPath": "C:\\Users\\andreja\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.DAL.Context\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\andreja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.Common.Models\\Prodavnica.Common.Models.csproj": {
+                "projectPath": "C:\\Users\\andreja\\Desktop\\Diplomski\\Aplikacija\\Prodavnica\\Prodavnica.Common.Models\\Prodavnica.Common.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.TypeScript.MSBuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.6.3, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<body>
+  <mat-toolbar style="margin-bottom:5%;">
+    <span>Dodavanje stavki racuna</span>
+    <span style="flex: 1 1 auto"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+  </mat-toolbar>
+  <form [formGroup]="service.stavkaForm" class="normal-form" (submit)="onSubmit()">
+
+    <div class="row">
+
+      <mat-form-field style="width:250px" class="example-full-width">
+        <input id="polje" formControlName="sifraRacuna" matInput placeholder="Sifra racuna" readonly>
+      </mat-form-field>
+
+      <mat-form-field style="width:250px; margin-left:10px" class="example-full-width">
+        <input id="polje" formControlName="kolicina" type="number" (keyup)="updateUkupnaCena($event.target.value)" matInput placeholder="Kolicina" required>
+        <mat-error>Polje kolicina je <strong>obavezno</strong> </mat-error>
+      </mat-form-field>
+
+    </div>
+
+
+    <div class="row">
+
+      <mat-form-field style="width:250px;" class="example-full-width">
+        <input id="polje" formControlName="ukupno" matInput placeholder="Ukupan iznos" readonly>
+      </mat-form-field>
+
+      <mat-form-field style="width:250px; margin-left:10px" class="example-full-width">
+        <input id="polje" formControlName="cena" type="number" matInput placeholder="Cena" readonly>
+        <mat-error>Polje cena je <strong>obavezno</strong> </mat-error>
+      </mat-form-field>
+
+    </div>
+
+    <div class="row">
+
+      <mat-form-field appearance="outline" style="width:250px;">
+        <mat-label>Vrsta materijala</mat-label>
+        <mat-select formControlName="vrstaMaterijalaId" [(value)]="selected" (selectionChange)="updateCena($event)">
+          <mat-option>--</mat-option>
+          <ng-container *ngFor="let vrsta of vrste">
+            <mat-option value="{{vrsta.vrstaMaterijalaId}}">{{vrsta.naziv}}</mat-option>
+          </ng-container>
+        </mat-select>
+        <mat-error>Neophodno je izabrati vrstu materijala</mat-error>
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button type="submit" color="primary" style=" width:200px">Dodaj stavku</button>
+      </div>
+
+
+
+    </div>
+
+  </form>
+
+  <div>
+    <button mat-raised-button color="primary" (click)="generisi()" style="width:200px; float:right; margin-top:-35px">Izdaj racun</button>
+  </div>
+
+</body>

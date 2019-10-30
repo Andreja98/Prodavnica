@@ -1,0 +1,93 @@
+<body>
+  <mat-toolbar style="margin-bottom:5%;">
+    <span>Kreiranje novog korisnika</span>
+    <span style="flex: 1 1 auto"></span>
+    <button class="btn-dialog-close" style="float:right" mat-stroked-button (click)="onClose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+  </mat-toolbar>
+  <form [formGroup]="service.kreirajKorisnika" class="normal-form" (submit)="onSubmit()">
+
+    <div class="row">
+
+      <mat-form-field style="width:200px" class="example-full-width">
+        <input id="polje" formControlName="ime" type="text" matInput placeholder="Ime" required>
+        <mat-error>Polje ime je <strong>obavezno</strong> </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width:200px; margin-left:10px;" class="example-full-width">
+        <input id="polje" formControlName="prezime" type="text" matInput placeholder="Prezime" required>
+        <mat-error>Polje prezime je <strong>obavezno</strong> </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width:200px; margin-left:10px;" class="example-full-width">
+        <input id="polje" formControlName="korisnickoIme" type="text" matInput placeholder="Korisnicko ime" required>
+        <mat-error>Polje korisnicko ime je <strong>obavezno</strong> </mat-error>
+      </mat-form-field>
+
+    </div>
+
+    <div class="row">
+
+      <mat-form-field style="width:200px;" class="example-full-width">
+        <input id="polje" formControlName="jmbg" type="number" matInput placeholder="JMBG" required>
+        <mat-error>Polje JMBG je <strong>obavezno</strong> </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width:200px; margin-left:10px;" class="example-full-width">
+        <input id="polje" formControlName="mail" type="text" matInput placeholder="E-mail" required>
+        <mat-error>Polje e-mail je <strong>obavezno</strong> </mat-error>
+      </mat-form-field>
+
+      <mat-form-field style="width:200px; margin-left:10px;" class="example-full-width">
+        <input id="polje" formControlName="lozinka" [type]="hide ? 'text' : 'password'" matInput placeholder="Lozinka" required>
+        <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon></a>
+          <mat-error>Polje lozinka je <strong>obavezno</strong> </mat-error>
+      </mat-form-field>
+
+    </div>
+
+    <div class="row">
+
+      <mat-form-field class="example-full-width" style="width:200px;">
+        <input id="polje" formControlName="datumRodjenja" matInput [matDatepicker]="picker" placeholder="Datum rodjenja" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-radio-group aria-label="Pol" style="margin-left:30px" formControlName="pol">
+        <mat-radio-button color="primary" value="Muski">Muski</mat-radio-button>
+        &nbsp;
+        <mat-radio-button color="primary" value="Zenski">Zenski</mat-radio-button>
+      </mat-radio-group>
+
+
+      <mat-form-field style="width:200px; margin-left:35px;" class="example-full-width">
+        <input id="polje" formControlName="plata" matInput placeholder="Plata" required>
+        <mat-error>Polje plata je <strong>obavezno</strong> </mat-error>
+      </mat-form-field>
+
+      
+
+    </div>
+
+    <div class="row">
+
+      <mat-form-field appearance="outline" style="width:200px;">
+        <mat-label>Rola</mat-label>
+        <mat-select formControlName="rolaId">
+          <mat-option>--</mat-option>
+          <ng-container *ngFor="let rola of role">
+            <mat-option value="{{rola.rolaId}}">{{rola.naziv}}</mat-option>
+          </ng-container>
+        </mat-select>
+        <mat-error>Neophodno je izabrati rolu</mat-error>
+      </mat-form-field>
+
+      <div class="example-button-row">
+        <button mat-raised-button color="primary" type="submit" [disabled]="service.kreirajKorisnika.invalid" style="width:200px; margin-left:210px; display:inline-block;">Potvrdi</button>
+      </div>
+
+    </div>
+
+  </form>
+</body>

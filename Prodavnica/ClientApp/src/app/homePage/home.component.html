@@ -1,0 +1,40 @@
+<body>
+  <mat-horizontal-stepper style="margin-left:180px;">
+    <mat-step [stepControl]="service.loginForm">
+      <form [formGroup]="service.loginForm">
+        <ng-template matStepLabel>Unesite korisnicko ime</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Korisnicko ime" formControlName="korisnickoIme" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Dalje</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="service.loginForm">
+      <form [formGroup]="service.loginForm">
+        <ng-template matStepLabel>Unesite lozinku</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Lozinka" [type]="hide ? 'text' : 'password'" formControlName="lozinka" required>
+          <a mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </a>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Nazad</button>
+          <button mat-button matStepperNext>Dalje</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Kraj</ng-template>
+      <div>
+        <button mat-button matStepperPrevious>Nazad</button>
+        <form [formGroup]="service.loginForm" class="normal-form" (submit)="onSubmit(service.loginForm)">
+          <button type="submit" mat-raised-button color="primary" style="margin-left:5px; float:right" [disabled]="!service.loginForm.valid">Uloguj se</button>
+        </form>
+      
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</body>

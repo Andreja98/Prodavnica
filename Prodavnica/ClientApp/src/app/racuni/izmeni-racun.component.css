@@ -1,0 +1,70 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+th {
+  font-size: 16px;
+  width: 200px;
+}
+
+#mat-icon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: #d6d6d6;
+}
+
+
+td {
+  font-size: 14px;
+  width: 300px;
+}
+
+#delete:hover {
+  color: #db0202;
+  cursor: pointer;
+}
+
+#delete {
+  color: #990909;
+}
+
+#info {
+  color: #16635c;
+  cursor: pointer;
+}
+
+  #info:hover {
+    color: #0ba192;
+  }
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: blue !important;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: black !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: blue !important;
+  ;
+}
+
+::ng-deep .mat-form-field-placeholder {
+  color: red;
+}
+
+.placeholder {
+  color: blue;
+}

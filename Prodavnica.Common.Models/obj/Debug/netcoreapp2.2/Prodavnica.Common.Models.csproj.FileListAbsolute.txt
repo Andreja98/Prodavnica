@@ -1,0 +1,10 @@
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Models\bin\Debug\netcoreapp2.2\Prodavnica.Common.Models.deps.json
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Models\bin\Debug\netcoreapp2.2\Prodavnica.Common.Models.dll
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Models\obj\Debug\netcoreapp2.2\Prodavnica.Common.Models.csproj.CoreCompileInputs.cache
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Models\obj\Debug\netcoreapp2.2\Prodavnica.Common.Models.AssemblyInfoInputs.cache
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Models\obj\Debug\netcoreapp2.2\Prodavnica.Common.Models.AssemblyInfo.cs
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Models\bin\Debug\netcoreapp2.2\Prodavnica.Common.Models.runtimeconfig.json
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Models\bin\Debug\netcoreapp2.2\Prodavnica.Common.Models.runtimeconfig.dev.json
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Models\bin\Debug\netcoreapp2.2\Prodavnica.Common.Models.pdb
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Models\obj\Debug\netcoreapp2.2\Prodavnica.Common.Models.dll
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Models\obj\Debug\netcoreapp2.2\Prodavnica.Common.Models.pdb

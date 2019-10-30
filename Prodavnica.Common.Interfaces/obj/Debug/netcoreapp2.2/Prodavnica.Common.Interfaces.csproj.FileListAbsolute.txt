@@ -1,0 +1,16 @@
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\bin\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.deps.json
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\bin\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.dll
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\obj\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\obj\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.AssemblyInfoInputs.cache
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\obj\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.AssemblyInfo.cs
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\bin\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.runtimeconfig.json
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\bin\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.runtimeconfig.dev.json
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\obj\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.csprojAssemblyReference.cache
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\bin\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.pdb
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\bin\Debug\netcoreapp2.2\Prodavnica.Common.Models.dll
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\bin\Debug\netcoreapp2.2\Prodavnica.DAL.Context.dll
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\bin\Debug\netcoreapp2.2\Prodavnica.Common.Models.pdb
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\bin\Debug\netcoreapp2.2\Prodavnica.DAL.Context.pdb
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\obj\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.csproj.CopyComplete
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\obj\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.dll
+C:\Users\andreja\Desktop\Diplomski\Aplikacija\Prodavnica\Prodavnica.Common.Interfaces\obj\Debug\netcoreapp2.2\Prodavnica.Common.Interfaces.pdb

@@ -1,0 +1,57 @@
+  <div class="mat-elevation-z8 table-responsive-sm" style="margin-right:20%; margin-left:-80px">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" type="text" style="color:black;">
+      <mat-placeholder style="font-size:17px;" class="placeholder">Pretraga vrsta</mat-placeholder>
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows matSort>
+
+
+      <ng-container matColumnDef="vrstaMaterijalaId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Vrsta materijala Id</th>
+        <td mat-cell id="vrstaMaterijalaId" *matCellDef="let vrstaMaterijala"> {{vrstaMaterijala.vrstaMaterijalaId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sifraMaterijala">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Sifra materijala </th>
+        <td mat-cell *matCellDef="let vrstaMaterijala"> {{vrstaMaterijala.sifraMaterijala}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="naziv">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Naziv vrste </th>
+        <td mat-cell *matCellDef="let vrstaMaterijala"> {{vrstaMaterijala.naziv}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cena">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Cena </th>
+        <td mat-cell *matCellDef="let vrstaMaterijala"> {{vrstaMaterijala.cena | number:'.2-2'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="kolicina">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Kolicina </th>
+        <td mat-cell *matCellDef="let vrstaMaterijala"> {{vrstaMaterijala.kolicina}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="dobavljac">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Dobavljac </th>
+        <td mat-cell *matCellDef="let vrstaMaterijala"> {{vrstaMaterijala.dobavljac}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="materijalId">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Materijal Id </th>
+        <td mat-cell *matCellDef="let vrstaMaterijala"> {{vrstaMaterijala.materijalId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="opcije">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Opcije</th>
+        <td mat-cell *matCellDef="let vrstaMaterijala">
+          <button mat-mini-fab color="primary"><a (click)="kreirajVrstu()"><i id="mat-icon" style="color:chartreuse" class="material-icons">add_circle_outline</i></a></button>
+          <button mat-mini-fab color="accent"><a (click)="IzmeniVrstuMaterijala(vrstaMaterijala.vrstaMaterijalaId)" id="info"><i class="material-icons">info</i></a></button>
+          <button mat-mini-fab color="warn"><a (click)="delete(vrstaMaterijala.vrstaMaterijalaId)" id="delete"><i class="material-icons">delete_forever</i></a></button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let vrstaMaterijala; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 100]" showFirstLastButtons></mat-paginator>
+  </div>

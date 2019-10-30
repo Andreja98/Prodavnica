@@ -1,0 +1,24 @@
+<body>
+  <mat-toolbar style="margin-bottom:6%">
+    <span>Kreiranje novog materijala</span>
+    <span style="flex: 1 1 auto"></span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabindex="-1"><mat-icon>clear</mat-icon></button>
+  </mat-toolbar>
+  <form [formGroup]="service.formKreiraj" class="normal-form" (submit)="onSubmit()" style="margin:0 auto;">
+    <div class="row">
+      <div class="col-2 ml-5 mr-4">
+        <div class="controls-container">
+
+
+          <mat-form-field class="example-full-width">
+            <input formControlName="naziv" matInput placeholder="Naziv" required> 
+            <mat-error>Polje naziv je <strong>obavezno</strong></mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="example-button-row">
+      <button mat-raised-button color="primary" [disabled]="service.formKreiraj.invalid" type="submit" style="width:383px; margin-top:10px;">Potvrdi</button>
+    </div>
+  </form>
+</body>
